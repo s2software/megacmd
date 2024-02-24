@@ -1,0 +1,13 @@
+services:
+  megacmd:
+    build:
+      context: ./
+    volumes:
+      - /path/to/megacmd/config:/root/.megaCmd # keep config
+      - /path/to/local/folder:/root/data # mount folder to sync
+    command: sh -c "tail -f /dev/null" # keep running
+
+# Config via Exec:
+# mega-cmd
+# login <email> <password>
+# sync /root/data /folder/in/mega
