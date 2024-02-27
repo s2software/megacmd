@@ -6,4 +6,5 @@ services:
     volumes:
       - ./config:/root/.megaCmd # keep config
       - ./data:/root/data # mount folder to sync
+    restart: unless-stopped
     command: sh -c "tail -f /dev/null" # keep running
